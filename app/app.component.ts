@@ -1,10 +1,7 @@
 import { Component } from '@angular/core';
+import { Hero } from './hero';
 import { HeroDetailComponent } from './hero-detail.component';
 
-export class Hero{
-    id: number;
-    name: string;
-}
 
 const HEROES: Hero[] = [
   { id: 11, name: 'Mr. Nice' },
@@ -32,7 +29,7 @@ const HEROES: Hero[] = [
     </li>
   </ul>
   <my-hero-detail [hero]="selectedHero"></my-hero-detail>
-  `
+  `,
   styles: [`
   .selected {
     background-color: #CFD8DC !important;
@@ -81,7 +78,7 @@ const HEROES: Hero[] = [
     margin-right: .8em;
     border-radius: 4px 0 0 4px;
   }
-`]
+`],
 directives: [HeroDetailComponent]
 })
 export class AppComponent { 
