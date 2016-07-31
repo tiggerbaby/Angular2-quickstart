@@ -11,12 +11,13 @@ import { HeroService } from './hero.service';
         <h1>{{title}}</h1>
         <nav>
             <a [routerLink]="['/dashboard']" routerLinkActive="active">Dashboard</a>
-            <a [routerLink]="['/heroes']">Heroes</a>
+            <a [routerLink]="['/heroes']" routerLinkActive="active">Heroes</a>
         <router-outlet></router-outlet>
         </nav>
         `,
+        styleUrls:['app/app.component.css'],
         directives:[ROUTER_DIRECTIVES],
-        providers: [HeroService]
+        providers: [HeroService],
     })
 
 export class AppComponent {
